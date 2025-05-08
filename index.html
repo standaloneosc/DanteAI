@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dante AI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="landing-page">
+        <div class="landing-content">
+            <h1>Dante AI</h1>
+            <p>Explore the Divine Comedy through interactive conversations</p>
+            <button id="enter-btn">Enter</button>
+        </div>
+    </div>
+
+    <div id="app-container" style="display: none;">
+        <nav>
+            <button id="nav-characters">Character Chat</button>
+            <button id="nav-scholar">Dante Scholar</button>
+        </nav>
+
+        <div id="character-mode" class="mode-container">
+            <h1>Dante's Commedia Characters</h1>
+            <div class="main-container">
+                <div class="character-grid" id="character-select">
+                    <!-- Inferno Characters -->
+                    <button class="character-btn" data-character="dante">Dante Alighieri</button>
+                    <button class="character-btn" data-character="virgil">Virgil</button>
+                    <button class="character-btn" data-character="beatrice">Beatrice</button>
+                    <button class="character-btn" data-character="francesca">Francesca</button>
+                    <button class="character-btn" data-character="ugolino">Ugolino</button>
+                    
+                    <!-- Purgatorio Characters -->
+                    <button class="character-btn" data-character="statius">Statius</button>
+                    <button class="character-btn" data-character="casella">Casella</button>
+                    <button class="character-btn" data-character="matelda">Matelda</button>
+                    <button class="character-btn" data-character="forese">Forese</button>
+                    <button class="character-btn" data-character="buonconte">Buonconte</button>
+                    
+                    <!-- Paradiso Characters -->
+                    <button class="character-btn" data-character="piccarda">Piccarda</button>
+                    <button class="character-btn" data-character="justinian">Justinian</button>
+                    <button class="character-btn" data-character="cacciaguida">Cacciaguida</button>
+                    <button class="character-btn" data-character="thomas">Thomas Aquinas</button>
+                    <button class="character-btn" data-character="bernard">St. Bernard</button>
+                </div>
+
+                <div id="chat-container" style="display: none;">
+                    <button id="back-btn">← Back to Characters</button>
+                    <div class="chat-wrapper">
+                        <div id="history-panel">
+                            <div id="history-list"></div>
+                        </div>
+                        <div class="chat-area">
+                            <div id="messages"></div>
+                            <div id="input-container">
+                                <input type="text" id="user-input" placeholder="Type your message...">
+                                <button id="send-btn">Send</button>
+                            </div>
+                        </div>
+                        <div class="character-image-container">
+                            <img id="character-image" src="" alt="Character Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="scholar-mode" class="mode-container" style="display: none;">
+            <h1>Dante Scholar</h1>
+            <div class="scholar-container">
+                <div class="scholar-info">
+                    <p>Ask questions about Dante's Divine Comedy, its historical context, or analysis of specific passages. Answers will be based on Dante's text and scholarly sources.</p>
+                </div>
+                <div id="scholar-chat">
+                    <div id="scholar-messages"></div>
+                    <div class="scholar-input">
+                        <input type="text" id="scholar-query" placeholder="Ask a question about Dante...">
+                        <button id="ask-btn">Ask</button>
+                    </div>
+                </div>
+                <div class="sources-section">
+                    <h3>Primary Sources Used:</h3>
+                    <ul>
+                        <li><a href="https://www.gutenberg.org/ebooks/1012" target="_blank">Original Italian Text (Gutenberg)</a></li>
+                        <li><a href="https://www.gutenberg.org/ebooks/8800" target="_blank">Allen Mandelbaum English Translation (Gutenberg)</a></li>
+                        <li><a href="https://dante.dartmouth.edu/" target="_blank">Dartmouth Dante Project (Commentary)</a></li>
+                        <li><a href="https://danteworlds.laits.utexas.edu/" target="_blank">Dante Worlds (Visual Guide)</a></li>
+                        <li><a href="https://digitaldante.columbia.edu/" target="_blank">Columbia Digital Dante</a></li>
+                        <li><a href="https://digitaldante.columbia.edu/" target="_blank">Harvard Documentary Hub</a></li>
+                    </ul>
+                    <p>Scholar responses may reference these editions but are AI-generated interpretations.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
